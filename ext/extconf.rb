@@ -5,9 +5,9 @@ require 'mkmf'
 apriori_root = File.dirname(__FILE__)
 
 $objs = ["#{apriori_root}/util/src/vecops.o", 
-         "#{apriori_root}/util/src/nimap.o",
+         "#{apriori_root}/util/src/symtab.o",
          "#{apriori_root}/util/src/tabscan.o",  
-         "#{apriori_root}/util/src/scform.o",
+         # "#{apriori_root}/util/src/scform.o",
          "#{apriori_root}/math/src/gamma.o",
          "#{apriori_root}/math/src/chi2.o", 
          "#{apriori_root}/apriori/src/tract.o",
@@ -16,6 +16,7 @@ $objs = ["#{apriori_root}/util/src/vecops.o",
          "Apriori.o"]
 
 $CPPFLAGS = " -I#{apriori_root}/util/src -I#{apriori_root}/math/src -I#{apriori_root}/apriori/src "
+$CFLAGS = " -DNIMAPFN "
 #$CFLAGS = " -ansi -Wall -pedantic  -DNDEBUG -O3 -DCHI2QTL_MAIN "
 #$CFLAGS = " -ansi -Wall -pedantic  -DNDEBUG -O3 -DCHI2QTL_MAIN "
 

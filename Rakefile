@@ -12,4 +12,3 @@ Dir['tasks/**/*.rake'].each { |rake| load rake }
 
 Rake::Task[:default].abandon
 task :default => :extension 
-

@@ -50,7 +50,7 @@ module Apriori
         line =~ /(.+)\s+<-\s+(.+?)\s+\((\d+\.\d)(?:\/(\d+))?,\s+(\d+\.\d)\)/
         consequent, antecedent, support, transactions, confidence = $1, $2, $3, $4, $5
         is.consequent = consequent 
-        is.antecedent = antecedent.split(/\s+/)
+        is.antecedent = antecedent.split(/\s+/) if antecedent
         is.support = support.to_f
         is.num_antecedent_transactions = transactions ? transactions.to_i : nil
         is.confidence = confidence.to_f
